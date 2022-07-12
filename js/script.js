@@ -31,16 +31,17 @@ if (ingresar) {
                 let opcion = prompt("escoge una opcion: \n1-Ir a pagar. \n salir");
                 while (opcion != "salir" && opcion != "SALIR") {
                     switch (opcion) {
-                        case "1":
-                            const suma = (a, b) => a + b;
-                            const resta = (a, b) => a - b;
+                        case "1":                            
+                            const suma = (a,b) => a + b;
+                            const resta = (a,b) => a - b;
                             const iva = x => x * 0.19
                             let precioProducto = 90.000
                             let descuento = 15.000
                             let precioTotal = resta(suma(precioProducto, iva(precioProducto)), descuento)
-                            console.log(precioTotal);
-
+                            console.log(precioTotal);                           
                             let total = ("Son $92.900");
+
+
                     }
 
 
@@ -51,3 +52,4 @@ if (ingresar) {
     }
 
 }
+
