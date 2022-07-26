@@ -1,12 +1,64 @@
 /*Bienvenida al sitio*/
 
-let nombreUsuario = prompt("Ingresa tu nombre")
-alert("Bienvenid@,  " + nombreUsuario)
+const btnSaludoBienvenido = document.getElementById("bienvenido");
+const btnSaludoUnico = document.getElementById("unico");
+const titulo = document.querySelector(".entrada")
+
+function saludoBienvenido() {
+    alert("Bienvenido/a a CeVeCatdog");
+}
+
+function saludoUnico(nombre) {
+    alert("Bienvenido/a,  " + nombre)
+}
+
+btnSaludoBienvenido.addEventListener("click", saludoBienvenido);
+
+
+//btnSaludoUnico.addEventListener("click", ()=>{
+    //let nombre = document.getElementById("nombre").value;
+   // SaludoUnico(nombre);
+//})
+
+btnSaludoUnico.onclick = ()=>{
+    alert("Cuidamos a tu mascota con mucho amor");
+}
+inputmascota.addEventListener("Keyup", () => {
+    console.log(inputmascota.value)
+})
+
+let inputmascota = document.getElementById("mascota");
+inputAControlar.onchange = () => {
+    console.log(inputAControlar.value);
+}
+
+/*alimento*/
+
+let radio7kilos = document.getElementById("7kilos");
+let radio10kilos = document.getElementById("10kilos");
+
+function cambiarImagen(source) {
+    document.getElementById("Monello").src = source
+}
+
+radio7kilos.addEventListener("click", () => {
+    cambiarImagen("../images/img.jpg");
+})
+
+radio15kilos.addEventListener("click", () => {
+    cambiarImagen("../images/15kg.jpg");
+})
+
+
+
+
+
+
 
 
 /*digite su clave*/
 
-let claveGuardada = "Colombia2022";
+/*let claveGuardada = "Colombia2022";
 let ingresar = false;
 for (let i = 2; i >= 0; i--) {
     let claveUsuario = prompt("Ingresa tu clave");
@@ -18,12 +70,12 @@ for (let i = 2; i >= 0; i--) {
         alert("error, te quedan " + i + " intentos")
     }
 
-}
+}*/
 
 /*opciones carrito*/
 
 
-class alimento {
+/*class alimento {
 
     constructor(nombre, peso, valor, id) {
         this.nombre = nombre;
@@ -97,5 +149,6 @@ if (ingresar) {
 
     }
 
-}
+}*/
+
 
