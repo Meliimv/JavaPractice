@@ -16,40 +16,55 @@ btnSaludoBienvenido.addEventListener("click", saludoBienvenido);
 
 
 //btnSaludoUnico.addEventListener("click", ()=>{
-    //let nombre = document.getElementById("nombre").value;
-   // SaludoUnico(nombre);
+//let nombre = document.getElementById("nombre").value;
+// SaludoUnico(nombre);
 //})
 
-btnSaludoUnico.onclick = ()=>{
+btnSaludoUnico.onclick = () => {
     alert("Cuidamos a tu mascota con mucho amor");
 }
-inputmascota.addEventListener("Keyup", () => {
-    console.log(inputmascota.value)
-})
 
-let inputmascota = document.getElementById("mascota");
-inputAControlar.onchange = () => {
-    console.log(inputAControlar.value);
-}
 
 /*alimento*/
 
 let radio7kilos = document.getElementById("7kilos");
-let radio10kilos = document.getElementById("10kilos");
+let radio15kilos = document.getElementById("15kilos");
 
 function cambiarImagen(source) {
     document.getElementById("Monello").src = source
 }
 
 radio7kilos.addEventListener("click", () => {
-    cambiarImagen("../images/img.jpg");
+    cambiarImagen("./images/monello7k.jpg");
 })
 
 radio15kilos.addEventListener("click", () => {
-    cambiarImagen("../images/15kg.jpg");
+    cambiarImagen("./images/monello15k.jpg");
 })
 
+function cambiarImagen(source) {
+    document.getElementById("Hills").src = source
+}
 
+radio7kilos.addEventListener("click", () => {
+    cambiarImagen("./images/hills7k.jpg");
+})
+
+radio15kilos.addEventListener("click", () => {
+    cambiarImagen("./images/hills15k.jpg");
+})
+
+let melissa = {
+    user: "Melissa Sanchez",
+    contraseña: "Colombia2022"
+
+}
+sessionStorage.setItem("usuario", melissa);
+console.log(sessionStorage.getItem("usuario"));
+sessionStorage.setItem("usuario", JSON.stringify(melissa));
+let usuarioMemo = JSON.parse(sessionStorage.getItem("usuario"));
+console.log(sessionStorage.getItem("usuario"));
+console.log(usuarioMemo);
 
 
 
