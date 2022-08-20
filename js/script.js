@@ -78,5 +78,23 @@ let usuarioMemo = JSON.parse(sessionStorage.getItem("usuario"));
 console.log(sessionStorage.getItem("usuario"));
 console.log(usuarioMemo);
 
+fetch("http://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    boody: JSON.stringify(
+        {
+            title: "Saludo",
+            body: "Hola a todos mis pacientes",
+            userId: 1,
+            
+        }
+    ),
+    headers: {
+        "Content-type": "application/json; charset=UTF-8",
+    },
+}).then((response)=>response.json())
+.then((data)=>console.log(data))
+
+
+
 
 
